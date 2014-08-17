@@ -27,7 +27,15 @@ body, input {
   display: -webkit-flex;
   font-family: 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
 }
+.bucketListLabel {
+  margin-top: 7rem;
+  margin-bottom: 0em;
+  color: #ecf0f1;
+}
 
+.bucketListInput {
+  margin-top:0;
+}
 .age-label {
   color: #B0B5B9;
   font-size: 1.2rem;
@@ -36,7 +44,7 @@ body, input {
 }
 
 .count {
-  color: #494949;
+  color: #ecf0f1;
   margin: 0;
   font-size: 6rem;
   line-height: 1;
