@@ -53,14 +53,14 @@ App.fn.renderAgeLoop = function(){
 
 App.fn.renderAge = function(){
   var now       = new Date
-  var duration  = now - this.dob;
+  var deathYear = 84 + this.dob.getFullYear();
+  var deathDate = new Date(deathYear,this.dob.getMonth(),this.dob.getDate());
+  var duration  = deathDate.getTime() - now.getTime();
   var years     = duration / 31556900000;
-
   var majorMinor = years.toFixed(9).toString().split('.');
-
   requestAnimationFrame(function(){
     this.html(this.view('age')({
-      year:         84 - majorMinor[0],
+      year:         (majorMinor[0]),
       milliseconds: majorMinor[1]
     }));
   }.bind(this));
